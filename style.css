@@ -64,6 +64,7 @@ h3{
     text-decoration: none;
     text-align: center;
     padding: 1.3em 3.2em; 
+    justify-self: center;
     border-radius: 2em;
     width: fit-content;
     box-shadow: 0 0.5em 0.5em rgba(0, 0, 0, 0.5);
@@ -72,4 +73,28 @@ h3{
 .læs-mere-tjenester{
     grid-column-start: 1;
     grid-column-end: 3;
+    grid-row-start: 5;
+    padding-bottom: 2em;
+}
+
+.workshop-box{
+    grid-row-start: 6;
+    /* background-color: #629D8C; */
+    text-align: center;
+    box-shadow: 0.2em 0.2em 0.2em #3A349E, 0.2em -0.2em 0.2em #3A349E;
+}
+
+.ledelse-box{
+    grid-row-start: 7;
+    grid-column-start: 3;
+    /* background-color: #629D8C; */
+    text-align: center;
+    box-shadow: 0.2em 0.2em 0.2em #3A349E, 0.2em -0.2em 0.2em #3A349E;
+}
+
+.tilkøb-box{
+    grid-row-start: 8;
+    /* background-color: #629D8C; */
+    text-align: center;
+    box-shadow: 0.2em 0.2em 0.2em #3A349E, 0.2em -0.2em 0.2em #3A349E;
 }
