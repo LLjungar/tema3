@@ -54,6 +54,8 @@ h3 {
 }
 
 .burger-icon {
+    position: relative;
+    z-index: 3; /* Sørg for, at ikonet er forrest i z-stakken */
     display: none; /* Skjul burgerikonet som standard */
     font-size: 24px; /* Juster størrelsen efter behov */
     cursor: pointer;

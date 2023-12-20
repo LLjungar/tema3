@@ -18,3 +18,5 @@ document.addEventListener('click', function (event) {
 burgerIcon.addEventListener('click', function (event) {
     event.stopPropagation();
 });
+
+
