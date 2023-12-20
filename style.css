@@ -75,6 +75,7 @@ h3{
     grid-column-end: 3;
     grid-row-start: 5;
     padding-bottom: 2em;
+    padding-top: 3em;
 }
 
 .workshop-box{
@@ -97,4 +98,16 @@ h3{
     /* background-color: #629D8C; */
     text-align: center;
     box-shadow: 0.2em 0.2em 0.2em #3A349E, 0.2em -0.2em 0.2em #3A349E;
+}
+
+.småting-med-tekst1{
+    grid-row-start: 9;
+}
+
+.småting-med-tekst2{
+    grid-row-start: 9;
+}
+
+.småting-med-tekst3{
+    grid-row-start: 9;
 }
