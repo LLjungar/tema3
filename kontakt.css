@@ -1,32 +1,10 @@
 
-.header {
-    position: relative;
-    background: url('img/header.svg') center center/cover no-repeat;
-    height: 100vh;
-    transition: min-height 0.3s, background-size 0.3s;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-}
-
-.logo-container {
-    z-index: 2; /* Sørg for, at logoet ligger over baggrunden */
-    margin-top: 4em;
-    margin-left: 3em;
-    text-align: left;
-}
-
-.menu-list {
-    z-index: 2; /* Sørg for, at navigationen ligger over baggrunden */
-    text-align: right;
-}
-
-
 /* Generel styling */
 img {
     max-width: 100%;
 }
 
+/*Forsøger at overrule i nav
 p {
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -47,10 +25,25 @@ h3 {
     color: #3B359F; 
 }
 
-li {
-    font-family: Arial, Helvetica, sans-serif;
-    color: #fff;
+*/
+
+.header {
+    position: relative;
+    background: url('img/header.svg') center center/cover no-repeat;
+    height: 100vh;
+    transition: min-height 0.3s, background-size 0.3s;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
 }
+
+.logo-container {
+    z-index: 2; /* Sørg for, at logoet ligger over baggrunden */
+    margin-top: 4em;
+    margin-left: 3em;
+    text-align: left;
+}
+
 
 .menu-container {
     display: flex;
@@ -60,7 +53,7 @@ li {
 
 .burger-icon {
     position: relative;
-    z-index: 3; /* Sørg for, at ikonet er forrest i z-stakken */
+    z-index: 4; /* Sørg for, at ikonet er forrest i z-stakken */
     display: none; /* Skjul burgerikonet som standard */
     font-size: 24px; /* Juster størrelsen efter behov */
     cursor: pointer;
@@ -68,20 +61,14 @@ li {
     margin-top: 1em;
 }
 
-.menu-list li {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-right: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-    color: #3B359F; /* Ændret farve her */
-    text-decoration: none; /* Fjernet understregning */
+.menu-list {
+    color: #fff;
+    z-index: 3; /* Sørg for, at navigationen ligger over baggrunden */
+    text-align: right;
 }
 
-.menu-list li:hover {
-    color: white; /* Ændret farve ved hover */
-}
 .menu-list {
+    color: #fff;
     display: flex;
     gap: 1em;
     justify-content: end;
@@ -89,9 +76,23 @@ li {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     cursor: pointer;
-    list-style: none;
-    color: #fff;
     text-decoration: none;
+    list-style: none;
+}
+
+.menu-list li {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 0;
+    text-align: center;
+}
+
+.menu-list li:visited {
+    color: #fff; /* Hvid tekstfarve for besøgte links */
+}
+
+.menu-list li:hover {
+    /* Ændret farve ved hover */
 }
 
 /* Tilpasninger for mobilvisning */
@@ -102,13 +103,6 @@ li {
         background-size: cover; /* Bevarer baggrundsbilledets proportioner */
         padding-bottom: 10em;
         
-    }
-
-    .logo-container {
-        z-index: 2; /* Sørg for, at logoet ligger over baggrunden */
-        margin-top: 2em;
-        margin-left: 1em;
-        text-align: left;
     }
 
     .burger-icon {
@@ -122,11 +116,17 @@ li {
         color: #fff; /* Skift farven til den ønskede farve (f.eks. rød) */
     }
 
+    .logo-container {
+        z-index: 2; /* Sørg for, at logoet ligger over baggrunden */
+        margin-top: 2em;
+        margin-left: 1em;
+        text-align: left;
+    }
+
     .menu-list {
         display: none;
         flex-direction: column;
         align-items: center;
-        background-color: white;
         box-sizing: border-box;
         padding: 20px;
         position: absolute;
@@ -139,7 +139,6 @@ li {
     .menu-list.show-mobile {
         display: flex;
         background-color: #3B359F;
-        color: #fff;
     }
 
 
@@ -149,7 +148,6 @@ li {
         margin-right: 0;
         font-family: Arial, Helvetica, sans-serif;
         text-align: center;
-        color: #fff;
     }
 }
 
