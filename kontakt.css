@@ -47,6 +47,11 @@ h3 {
     color: #3B359F; 
 }
 
+li {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+}
+
 .menu-container {
     display: flex;
     align-items: center;
@@ -59,8 +64,23 @@ h3 {
     display: none; /* Skjul burgerikonet som standard */
     font-size: 24px; /* Juster størrelsen efter behov */
     cursor: pointer;
+    color: #fff;
+    margin-top: 1em;
 }
 
+.menu-list li {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: #3B359F; /* Ændret farve her */
+    text-decoration: none; /* Fjernet understregning */
+}
+
+.menu-list li:hover {
+    color: white; /* Ændret farve ved hover */
+}
 .menu-list {
     display: flex;
     gap: 1em;
@@ -70,7 +90,7 @@ h3 {
     font-weight: bold;
     cursor: pointer;
     list-style: none;
-    color: white;
+    color: #fff;
     text-decoration: none;
 }
 
@@ -99,7 +119,7 @@ h3 {
     }
 
     .burger-icon.show-mobile {
-        color: #ff0000; /* Skift farven til den ønskede farve (f.eks. rød) */
+        color: #fff; /* Skift farven til den ønskede farve (f.eks. rød) */
     }
 
     .menu-list {
@@ -118,16 +138,18 @@ h3 {
 
     .menu-list.show-mobile {
         display: flex;
-        background-color: rgba(46, 63, 85, 0.9);
+        background-color: #3B359F;
+        color: #fff;
     }
 
-    menu-list li {
+
+    .menu-list li {
         margin-top: 10px;
         margin-bottom: 10px;
         margin-right: 0;
         font-family: Arial, Helvetica, sans-serif;
         text-align: center;
-        color: white;
+        color: #fff;
     }
 }
 
