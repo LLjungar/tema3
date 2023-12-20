@@ -38,6 +38,11 @@ h3{
     /*color: white;*/
 }
 
+.nav-list a{
+    text-decoration: none;
+    color: inherit;
+}
+
 
 /* Styling main */
 
@@ -79,7 +84,7 @@ h3{
 }
 
 .workshop-container{
-    display: grid;
+    /* display: grid; */
     grid-row-start: 6;
     padding: 0 1em;
 }
@@ -88,7 +93,7 @@ h3{
     /* grid-row-start: 6; */
     /* background-color: #629D8C; */
     display: grid;
-    grid-template-rows: 4;
+    grid-template-rows: repeat(3, 1fr);
     height: 16em;
     text-align: center;
     box-shadow: 
@@ -101,6 +106,7 @@ h3{
 }
 
 .workshop-tekst{
+    padding: 0 1em;
     grid-row-start: 2;
 }
 
@@ -132,7 +138,9 @@ h3{
     /* grid-row-start: 7; */
     /* grid-column-start: 3; */
     /* background-color: #629D8C; */
-    height: 14em;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    height: 16em;
     text-align: center;
     box-shadow: 
     0.2em 0.2em 0.2em #3A349E,   
@@ -140,6 +148,30 @@ h3{
     -0.2em 0.2em 0.2em #3A349E,   
     0.2em -0.2em 0.2em #3A349E;
     padding-top: 1em;
+    position: relative;
+}
+
+.ledelse-tekst{
+    padding: 0 1em;
+    grid-row-start: 2;
+}
+
+.ledelse-læs-mere-button{
+    position: absolute;
+    /* bottom: 1em;
+    left: 50%;
+    transform: translateX(-50%); */
+    background: linear-gradient(to bottom, #629D8C, #3A349E);
+    font-family: Arial, Helvetica, sans-serif;
+    color: whitesmoke;
+    text-decoration: none;
+    padding: 1.3em 3.2em; 
+    justify-self: center;
+    align-self: flex-end;
+    border-radius: 2em;
+    width: fit-content;
+    box-shadow: 0 0.5em 0.5em rgba(0, 0, 0, 0.5);
+    margin-bottom: 1em;
 }
 
 .tilkøb-container{
@@ -148,16 +180,42 @@ h3{
 }
 
 .tilkøb-box{
-    grid-row-start: 8;
+    /* grid-row-start: 6; */
     /* background-color: #629D8C; */
-    height: 14em;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    height: 16em;
     text-align: center;
     box-shadow: 
-    0.2em 0.2em 0.2em #3A349E,
-    -0.2em -0.2em 0.2em #3A349E, 
-    -0.2em 0.2em 0.2em #3A349E,
+    0.2em 0.2em 0.2em #3A349E, 
+    -0.2em -0.2em 0.2em #3A349E,  
+    -0.2em 0.2em 0.2em #3A349E,   
     0.2em -0.2em 0.2em #3A349E;
     padding-top: 1em;
+    position: relative;
+}
+
+.tilkøb-tekst{
+    padding: 0 1em;
+    grid-row-start: 2;
+}
+
+.tilkøb-læs-mere-button{
+    position: absolute;
+    /* bottom: 1em;
+    left: 50%;
+    transform: translateX(-50%); */
+    background: linear-gradient(to bottom, #629D8C, #3A349E);
+    font-family: Arial, Helvetica, sans-serif;
+    color: whitesmoke;
+    text-decoration: none;
+    padding: 1.3em 3.2em; 
+    justify-self: center;
+    align-self: flex-end;
+    border-radius: 2em;
+    width: fit-content;
+    box-shadow: 0 0.5em 0.5em rgba(0, 0, 0, 0.5);
+    margin-bottom: 1em;
 }
 
 .småting-med-tekst1{
