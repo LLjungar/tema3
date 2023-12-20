@@ -130,6 +130,7 @@ h3{
 
 .ledelse-container{
     grid-row-start: 7;
+    /* evt grid-column-start 2 afhængig af maskot */
     grid-column-start: 3;
     padding: 0 1em;
 }
