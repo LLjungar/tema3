@@ -1,27 +1,31 @@
+
 .header {
-    position: relative; /* Sørg for, at position: relative; er sat for at positionere børneelementer relativt til denne */
-    background: url('img/header.svg') center/cover no-repeat; /* Tilføj en baggrund med centreret indhold og cover-størrelse */
-    height: 100vh; /* Juster headerhøjden efter behov */
+    position: relative;
+    background: url('img/header.svg') center center/cover no-repeat;
+    height: 100vh;
+    transition: min-height 0.3s, background-size 0.3s;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
 }
 
 .logo-container {
-    position: relative;
     z-index: 2; /* Sørg for, at logoet ligger over baggrunden */
+    margin-top: 4em;
+    margin-left: 3em;
+    text-align: left;
 }
 
 .menu-list {
-    position: relative;
     z-index: 2; /* Sørg for, at navigationen ligger over baggrunden */
+    text-align: right;
 }
 
 
-
-/* generel styling */
-
+/* Generel styling */
 img {
-        max-width: 100%;
-    }
-
+    max-width: 100%;
+}
 
 p {
     font-family: Arial, Helvetica, sans-serif;
@@ -57,3 +61,48 @@ h3 {
     /* color: white;  */
 }
 
+.burger-icon {
+    display: none; /* Skjul burgerikonet som standard */
+    font-size: 24px; /* Juster størrelsen efter behov */
+    cursor: pointer;
+}
+
+/* Tilpasninger for mobilvisning */
+@media only screen and (max-width: 767px) {
+    .header {
+        min-height: auto; /* Ændrer headerens højde til at tilpasse indholdet */
+        height: auto; /* Juster height til auto */
+        background-size: cover; /* Bevarer baggrundsbilledets proportioner */
+        padding-bottom: 10em;
+        
+    }
+
+    .logo-container {
+        z-index: 2; /* Sørg for, at logoet ligger over baggrunden */
+        margin-top: 2em;
+        margin-left: 1em;
+        text-align: left;
+    }
+
+    .burger-icon {
+        display: block; /* Vis burgerikonet i mobilvisning */
+        margin-right: 1em; /* Juster margen efter behov */
+    }
+
+    .menu-list {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        background-color: #2e3f55;
+        box-sizing: border-box;
+        padding: 20px;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+    }
+
+    .menu-list.show-mobile {
+        display: flex;
+    }
+}
