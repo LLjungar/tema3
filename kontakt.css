@@ -1,0 +1,59 @@
+.header {
+    position: relative; /* Sørg for, at position: relative; er sat for at positionere børneelementer relativt til denne */
+    background: url('img/header.svg') center/cover no-repeat; /* Tilføj en baggrund med centreret indhold og cover-størrelse */
+    height: 100vh; /* Juster headerhøjden efter behov */
+}
+
+.logo-container {
+    position: relative;
+    z-index: 2; /* Sørg for, at logoet ligger over baggrunden */
+}
+
+.menu-list {
+    position: relative;
+    z-index: 2; /* Sørg for, at navigationen ligger over baggrunden */
+}
+
+
+
+/* generel styling */
+
+img {
+        max-width: 100%;
+    }
+
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #3B359F;  
+}
+
+h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #3B359F; 
+    font-style: italic;
+}
+
+h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #3B359F; 
+}
+
+.menu-list {
+    display: flex;
+    gap: 1em;
+    justify-content: end;
+    padding: 3em 3em 0 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    list-style: none;
+    color: white;
+    text-decoration: none;
+    /* color: white;  */
+}
+
