@@ -1,54 +1,30 @@
-
 /* Generel styling */
 img {
     max-width: 100%;
 }
-
-/*Forsøger at overrule i nav
-p {
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-h1 {
-    font-family: Arial, Helvetica, sans-serif;
-    color: #3B359F;  
-}
-
-h2 {
-    font-family: Arial, Helvetica, sans-serif;
-    color: #3B359F; 
-    font-style: italic;
-}
-
-h3 {
-    font-family: Arial, Helvetica, sans-serif;
-    color: #3B359F; 
-}
-
-*/
 
 .header {
     position: relative;
     background: url('img/header.svg') center center/cover no-repeat;
     height: 100vh;
     transition: min-height 0.3s, background-size 0.3s;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: auto 1fr; /* Opret to kolonner: én for logo og én for menu */
     align-items: flex-start;
 }
 
 .logo-container {
     z-index: 2; /* Sørg for, at logoet ligger over baggrunden */
-    margin-top: 4em;
-    margin-left: 3em;
+    margin-top: 6.2em;
+    margin-left: 2em;
     text-align: left;
 }
-
 
 .menu-container {
     display: flex;
     align-items: center;
-    margin-top: 20px; /* Juster topmargen efter behov */
+    justify-content: flex-end; /* Justeret for at placere menuen til højre */
+    margin-top: 1em; /* Juster topmargen efter behov */
 }
 
 .burger-icon {
@@ -66,7 +42,6 @@ h3 {
     text-align: right;
     display: flex;
     gap: 1em;
-    justify-content: end;
     padding: 3em 3em 0 0;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
@@ -92,18 +67,20 @@ h3 {
     color: #fff; /* Hvid tekstfarve for besøgte links */
 }
 
-.menu-list li:hover {
-    /* Ændret farve ved hover */
-}
-
 /* Tilpasninger for mobilvisning */
 @media only screen and (max-width: 767px) {
     .header {
         min-height: auto; /* Ændrer headerens højde til at tilpasse indholdet */
         height: auto; /* Juster height til auto */
         background-size: cover; /* Bevarer baggrundsbilledets proportioner */
-        padding-bottom: 10em;
-        
+        padding-bottom: 18em;
+    }
+
+    .logo-container {
+        z-index: 2; /* Sørg for, at logoet ligger over baggrunden */
+        margin-top: 3em;
+        margin-left: 2em;
+        text-align: left;
     }
 
     .burger-icon {
@@ -115,13 +92,6 @@ h3 {
 
     .burger-icon.show-mobile {
         color: #fff; /* Skift farven til den ønskede farve (f.eks. rød) */
-    }
-
-    .logo-container {
-        z-index: 2; /* Sørg for, at logoet ligger over baggrunden */
-        margin-top: 2em;
-        margin-left: 1em;
-        text-align: left;
     }
 
     .menu-list {
@@ -142,7 +112,6 @@ h3 {
         display: flex;
     }
 
-
     .menu-list li {
         margin-top: 10px;
         margin-bottom: 10px;
@@ -151,4 +120,3 @@ h3 {
         text-align: center;
     }
 }
-
