@@ -9,7 +9,7 @@ img {
     height: 100vh;
     transition: min-height 0.3s, background-size 0.3s;
     display: grid;
-    grid-template-columns: auto 1fr; /* Opret to kolonner: én for logo og én for menu */
+    grid-template-columns: 1fr 1fr; /* Opret to kolonner: én for logo og én for menu */
     align-items: flex-start;
 }
 
@@ -29,7 +29,7 @@ img {
 
 .burger-icon {
     position: relative;
-    z-index: 4; /* Sørg for, at ikonet er forrest i z-stakken */
+    z-index: 5; /* Sørg for, at ikonet er forrest i z-stakken */
     display: none; /* Skjul burgerikonet som standard */
     font-size: 24px; /* Juster størrelsen efter behov */
     cursor: pointer;
@@ -88,6 +88,7 @@ img {
         margin-top: 1em; /* Juster topmargen efter behov */
         margin-right: 1em; /* Juster margen efter behov */
         transition: color 0.3s;
+        cursor: pointer;
     }
 
     .burger-icon.show-mobile {
@@ -119,4 +120,103 @@ img {
         font-family: Arial, Helvetica, sans-serif;
         text-align: center;
     }
+}
+
+/*Kontaktformular*/
+
+/* Reset nogle standardmargener og paddinger for at gøre det mere konsistent */
+body, h1, p, label, input, textarea, select, option, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Grundlæggende styling for body */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Kontaktform styling */
+.kontaktform {
+    max-width: 600px; /* Tilpas bredden efter behov */
+    margin: 20px auto; /* Centrer formen på siden med lidt margen */
+    padding: 20px; /* Tilføj indvendig polstring efter behov */
+    background: #f9f9f9; /* Tilføj ønsket baggrundsfarve */
+    border: 1px solid #ddd; /* Tilføj en enkel ramme */
+    box-shadow: 0 4px 16px rgba(59, 53, 159, 0.4); /* Opdateret skygge med en mere markeret bundskygge */
+}
+
+h1 {
+    font-size: 24px; /* Tilpas størrelsen efter behov */
+    margin-bottom: 20px; /* Tilføj margen efter behov */
+}
+
+/* Label styling */
+label {
+    display: block;
+    margin-bottom: 5px; /* Tilføj margen efter behov */
+}
+
+/* Input styling */
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 10px; /* Tilpas polstringen efter behov */
+    margin-bottom: 15px; /* Tilføj margen efter behov */
+    box-shadow: 0 4px 8px rgba(59, 53, 159, 0.2); /* Skygge */
+    border: none; /* Fjern kantlinjen */
+    border-radius: 0; /* Gør hjørnerne helt firkantede */
+    background-color: #fff; /* Sæt baggrundsfarven til hvid */
+}
+
+/* Farvet kant i bunden af input med gennemsigtighed */
+input,
+textarea,
+select {
+    border: none; /* Fjern eksisterende kantlinje */
+    border-bottom: 2px solid rgba(59, 53, 159, 0.7); /* Gennemsigtig kant i bunden */
+}
+
+/* Fjern skyggen fra formularen */
+.kontaktform form {
+    box-shadow: none;
+}
+
+
+
+/* Checkbox styling */
+.checkbox {
+    margin-bottom: 20px; /* Tilføj margen efter behov */
+}
+
+.checkbox div {
+    margin-bottom: 10px; /* Tilføj margen efter behov */
+}
+
+/* Radio button styling */
+fieldset {
+    margin-bottom: 20px; /* Tilføj margen efter behov */
+}
+
+
+/*Styling af footer*/
+.footer {
+    width: 100%;
+    background: url('img/footer.svg') center center/cover no-repeat;
+    height: 100vh;
+    transition: min-height 0.3s, background-size 0.3s;
+    padding-top: 2em;
+    bottom: 2em;
+    position: relative; /* Tilføjet position:relative; */
+}
+
+.footer-indhold{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 2em;
+    bottom: 2em;
+    position: relative; /* Tilføjet position:relative; */
 }

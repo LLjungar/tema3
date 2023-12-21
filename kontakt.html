@@ -31,81 +31,51 @@
 
 
 
-     <!--Kontaktform - hovedindhold--> 
-    <main class="kontaktform">
+    
+     <!-- Kontaktform - hovedindhold -->
+     <main class="kontaktform">
         <h1>Kontakt os</h1>
-            <p class="kontakt-tekst">Skriv til os via kontaktformularen og så vender vi tilbage til dig</p>
-      <form>
-        <label for="navn">Navn</label>
-        <input id="navn" type="text"> 
+        <p class="kontakt-tekst">Har du spørgsmål til mig, eller har du brug for et tilbud.
+            Det eneste du skal gøre er at udfylde kontaktformularen, så vender jeg tilbage hurtigst muligt.</p>
+        <br>
+        <form>
+            <label for="navn">Navn</label>
+            <input id="navn" type="text"> 
 
-        <label for="mail">E-mail</label>
-        <input id="mail" type="email"> 
+            <label for="efternavn">Efternavn</label>
+            <input id="efternavn" type="text"> 
 
-        <label for="tel">Telefon</label>
-        <input id="tel" type="tel"> 
+            <label for="tel">Telefon</label>
+            <input id="tel" type="tel"> 
 
-        <label for="adresse">Adresse</label>
-        <input id="adresse" type="text"> 
+            <label for="mail">Email</label>
+            <input id="mail" type="text"> 
 
-        <!--Dropdown-->
-        <div class="custom-select">
-            <label for="region">Vælg region</label>
-            <select id="region">
-                <option value="0" selected="true" disabled>Vælg region</option>
-                <option value="1">Syddanmark</option>
-                <option value="2">Sjelland</option>
-                <option value="3">Hovedstaden</option>
-                <option value="4">Nordjylland</option>
-                <option value="5">Midtjylland</option>
+            <label for="besked">Besked</label>
+            <textarea id="besked" cols="30" rows="10"></textarea>
 
-
-            </select>
-
-
-        </div>
-
-        <!--Checkbox af services-->
-        <fieldset class="checkbox">
-           <legend>Hvilke services ønsker du tilbud på?</legend>
-           <div>
-               <input type="checkbox" id="rengoring">
-               <label for="rengoring">Rengøring</label>
-           </div>
-
-           <div>
-              <input type="checkbox" id="bilrengoring">
-              <label for="bilrengoring">Bilrengøring</label>
-           </div>
-
-           <div>
-              <input type="checkbox" id="vindusepudsning">
-              <label for="vinduespudsning">Vinduespudsning</label>
-            </div>
-      </fieldset>
-
-      <label for="besked">Besked</label>
-      <textarea id="besked" cols="30" rows="10"></textarea>
-
-      <fieldset>
-        <legend>Må vi kontakte dig på telefon?</legend>
-        <input id="ja" type="radio">
-        <label for="ja">Ja</label>
-
-       <input id="nej" type="radio">
-       <label for="nej">Nej</label>
-
-
-      </fieldset>
-
-       <input type="submit" name="submit" value="Send besked">
-
-
-
+            <input type="submit" name="submit" value="Send besked">
         </form>
+</main>
 
-      
-       
-    </main>
+    <footer>
+    <div class="footer-indhold">
+      <div class="venstre">
+        <p>IT Workshoppen</p>
+        <p>Adressensvej 1, 1000 Byen</p>
+        <p>Tlf: 12 34 56 78</p>  
+        <p>hello@itworkshoppen.dk</p>
+        <p>CVR: 1234 567 890</p>  
+      </div>
+      <div class="højre">
+        <p>>  Hjem </p>  
+        <p>>  Blog</p>  
+        <p>>  Tjenester</p>
+        <p>>  Om</p>
+        <p>>  Kontakt</p>
+      </div>
+    </div>
+    </footer>
+   <script src="burger-menu.js"></script>
 </body>
 </html>
