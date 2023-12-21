@@ -2,52 +2,97 @@
 <html lang="da">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kontakt</title>
-    <link rel="stylesheet" href="kontakt.css">
-    
+    <title>Kontaktform</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header class="header">
-        
-        <div class="logo-container">
-            <a href="index.html">
-              <img src="img/logo.svg" alt="IT Workshoppen"></a>
+    <!--Navigation-->
+    <header>
+		<nav>
+			<a class="logo" href="index.html"><img src="images/logo.png" alt="company logo which is an orange pentagon"></a>
+			<ul>
+				<li><a href="#">Om</a></li>
+				<li><a href="index.html">Kontakt</a></li>
+			</ul>
+		</nav>
+	</header>
+
+     <!--Kontaktform - hovedindhold--> 
+    <main class="kontaktform">
+        <h1>Kontakt os</h1>
+            <p class="kontakt-tekst">Skriv til os via kontaktformularen og så vender vi tilbage til dig</p>
+      <form>
+        <label for="navn">Navn</label>
+        <input id="navn" type="text"> 
+
+        <label for="mail">E-mail</label>
+        <input id="mail" type="email"> 
+
+        <label for="tel">Telefon</label>
+        <input id="tel" type="tel"> 
+
+        <label for="adresse">Adresse</label>
+        <input id="adresse" type="text"> 
+
+        <!--Dropdown-->
+        <div class="custom-select">
+            <label for="region">Vælg region</label>
+            <select id="region">
+                <option value="0" selected="true" disabled>Vælg region</option>
+                <option value="1">Syddanmark</option>
+                <option value="2">Sjelland</option>
+                <option value="3">Hovedstaden</option>
+                <option value="4">Nordjylland</option>
+                <option value="5">Midtjylland</option>
+
+
+            </select>
+
+
         </div>
 
-        <div class="menu-container">
-            <div class="burger-icon">&#9776;</div>
-            <ul class="menu-list">
-                <li><a href="tjenester.html">Tjenester</a></li>
-                <li><a href="om.html">Om</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="kontakt.html">Kontakt</a></li>
-            </ul>
-        </div>
-    </header>
+        <!--Checkbox af services-->
+        <fieldset class="checkbox">
+           <legend>Hvilke services ønsker du tilbud på?</legend>
+           <div>
+               <input type="checkbox" id="rengoring">
+               <label for="rengoring">Rengøring</label>
+           </div>
 
-    <main>
-        <h1>Kontakt mig</h1>
+           <div>
+              <input type="checkbox" id="bilrengoring">
+              <label for="bilrengoring">Bilrengøring</label>
+           </div>
 
-        <p>Stefan Quvang Christensen</p>
-        <p>Adresse</p>
-        <p>Tlf</p>
-        <p>Email</p>
+           <div>
+              <input type="checkbox" id="vindusepudsning">
+              <label for="vinduespudsning">Vinduespudsning</label>
+            </div>
+      </fieldset>
 
-        <p>billede af maskot</p>
-        <img src="img/kontaktmaskot.svg" alt="Uglelignende maskot der illustrerer et opkald med vingen ved øret">
+      <label for="besked">Besked</label>
+      <textarea id="besked" cols="30" rows="10"></textarea>
 
-        <p>Har du spørgsmål til mig, eller har du brug for et tilbud.
-        Det eneste du skal gøre er at udfylde kontaktformularen, så vender jeg tilbage hurtigst muligt.</p>
+      <fieldset>
+        <legend>Må vi kontakte dig på telefon?</legend>
+        <input id="ja" type="radio">
+        <label for="ja">Ja</label>
 
-        <p>kontaktformularen</p>
+       <input id="nej" type="radio">
+       <label for="nej">Nej</label>
+
+
+      </fieldset>
+
+       <input type="submit" name="submit" value="Send besked">
+
+
+
+        </form>
+
+      
+       
     </main>
-
-    <footer>
-        <img src="img/footer.svg" alt="Footerens baggrundsbillede">
-        <p>info om stefan og kontakt - måske også navigation</p>
-    </footer>
-    <script src="burger-menu.js" defer></script>
 </body>
 </html>

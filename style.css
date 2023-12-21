@@ -1,232 +1,135 @@
-/* generel styling */
+/*Generel styling*/
 
-header{
-    img{
-        max-width: 100%;
-    }
+* { /*alt på siden bliver påvirket*/
+	box-sizing: border-box; /*Padding og border inkluderes i bredde og højde*/
 }
 
-p{
-    font-family: Arial, Helvetica, sans-serif;
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	margin: 0 0 5em 0; /*Resetting af margin i hele bodyen + tilføjer luft under kontaktformular*/
+}
+
+h1, h2, h3, h4, h5, h6{
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
 }
 
 h1{
-    font-family: Arial, Helvetica, sans-serif;
-    color: #3B359F;  
+	text-transform: uppercase; /*Teksten transformeres til udelukkende at være store bogstaver*/
 }
 
-h2{
-    font-family: Arial, Helvetica, sans-serif;
-    color: #3B359F; 
-    font-style: italic;
-}
-
-h3{
-    font-family: Arial, Helvetica, sans-serif;
-    color: #3B359F; 
-}
-
-.nav-list{
-    display: flex;
-    gap: 1em;
-    justify-content: end;
-    padding: 3em 3em 0 0;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    cursor: pointer;
-    list-style: none;
-    /*color: white;*/
-}
-
-.nav-list a{
-    text-decoration: none;
-    color: inherit;
+.kontakt-tekst{
+	font-weight: 200;
+	font-size: 22px;
 }
 
 
-/* Styling main */
-
-.frontpage-container{
-    display: grid; 
-    grid-template-columns: 1fr 1fr 1fr;
-    margin: 6em 6em;
+/*Navigation start*/
+header{
+	background-color: #333;
+	height: 5em;
+	padding: 1em;
+	margin-bottom: 4em;	
 }
 
-.intro{
-    grid-column-start: 1;
-    grid-column-end: 3;
+.logo img{
+	height: 50px;
 }
 
-.stefan-img{
-    justify-self: end;
+nav ul{
+	float: right;
+	list-style-type: none;
 }
 
-.kontakt-button-forside{
-    grid-column-start: 2;
-    background: linear-gradient(to bottom, #629D8C, #3A349E);
-    font-family: Arial, Helvetica, sans-serif;
-    color: whitesmoke;
-    text-decoration: none;
-    text-align: center;
-    padding: 1.3em 3.2em; 
-    justify-self: center;
-    border-radius: 2em;
-    width: fit-content;
-    box-shadow: 0 0.5em 0.5em rgba(0, 0, 0, 0.5);
+nav li {
+	display: inline-block;
 }
 
-.læs-mere-tjenester{
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 5;
-    padding-bottom: 2em;
-    padding-top: 3em;
+nav li a {
+	text-decoration: none;
+	padding: 1em;
+	font-size: 20px;
+	color:#fff;
+	text-transform: uppercase;
 }
 
-.workshop-container{
-    /* display: grid; */
-    grid-row-start: 6;
-    padding: 0 1em;
+nav a:hover{
+	color: #DD7824;
+	transition: 0.5s; /*skaber en mere blød overgang mellem linkfarverne*/
 }
 
-.workshop-box{
-    /* grid-row-start: 6; */
-    /* background-color: #629D8C; */
-    display: grid;
-    grid-template-rows: repeat(3, 1fr);
-    height: 16em;
-    text-align: center;
-    box-shadow: 
-    0.2em 0.2em 0.2em #3A349E, 
-    -0.2em -0.2em 0.2em #3A349E,  
-    -0.2em 0.2em 0.2em #3A349E,   
-    0.2em -0.2em 0.2em #3A349E;
-    padding-top: 1em;
-    position: relative;
+main{
+    padding: 0 2em 2em;
 }
 
-.workshop-tekst{
-    padding: 0 1em;
-    grid-row-start: 2;
+
+/*Kontaktform*/
+
+.kontaktform {
+  border-radius: 5px;
+  background-color: #c5c5c5;
+  padding: 1.3em;
+  width: 50%;
+  margin: 0 auto; /*Centrerer elementet på siden*/
 }
 
-.workshop-læs-mere-button{
-    position: absolute;
-    /* bottom: 1em;
-    left: 50%;
-    transform: translateX(-50%); */
-    background: linear-gradient(to bottom, #629D8C, #3A349E);
-    font-family: Arial, Helvetica, sans-serif;
-    color: whitesmoke;
-    text-decoration: none;
-    padding: 1.3em 3.2em; 
-    justify-self: center;
-    align-self: flex-end;
-    border-radius: 2em;
-    width: fit-content;
-    box-shadow: 0 0.5em 0.5em rgba(0, 0, 0, 0.5);
-    margin-bottom: 1em;
+input[type=text], input[type=email], input[type=tel], select, textarea{
+	width: 100%;
+	padding: 1em;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	margin-top: 0,5em;
+	margin-bottom: 1em;
+}
+select, input[type=checkbox], input[type=radio], input[type=submit]{
+	cursor: pointer;
+
+}
+fieldset {
+	border-color: orange;
+	border-style: dotted;
+	margin-bottom: 0,8em;
+}
+input[type=checkbox] {
+     margin: 0.8em 0;
+}
+input[type=submit]  {
+	background-color: #DD7824;
+	color: white;
+	padding: 0.8em 1.5em;
+	border-radius: 4px;
+	width: 100%;
+	font-size: 18px;
+
+
+
+}
+input[type=submit] :hover {
+	background-color: #ff8827;
+}
+/*Andre style elementer*/
+
+.visually-hidden{ /*WCAG defineret class som fjerner element fra skærm, men som stadig kan læses af skærmlæseren*/
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
 }
 
-.ledelse-container{
-    grid-row-start: 7;
-    /* evt grid-column-start 2 afhængig af maskot */
-    grid-column-start: 3;
-    padding: 0 1em;
-}
 
-.ledelse-box{
-    /* grid-row-start: 7; */
-    /* grid-column-start: 3; */
-    /* background-color: #629D8C; */
-    display: grid;
-    grid-template-rows: repeat(3, 1fr);
-    height: 16em;
-    text-align: center;
-    box-shadow: 
-    0.2em 0.2em 0.2em #3A349E,   
-    -0.2em -0.2em 0.2em #3A349E,  
-    -0.2em 0.2em 0.2em #3A349E,   
-    0.2em -0.2em 0.2em #3A349E;
-    padding-top: 1em;
-    position: relative;
-}
+/*Responsiv tilpasning*/
 
-.ledelse-tekst{
-    padding: 0 1em;
-    grid-row-start: 2;
-}
-
-.ledelse-læs-mere-button{
-    position: absolute;
-    /* bottom: 1em;
-    left: 50%;
-    transform: translateX(-50%); */
-    background: linear-gradient(to bottom, #629D8C, #3A349E);
-    font-family: Arial, Helvetica, sans-serif;
-    color: whitesmoke;
-    text-decoration: none;
-    padding: 1.3em 3.2em; 
-    justify-self: center;
-    align-self: flex-end;
-    border-radius: 2em;
-    width: fit-content;
-    box-shadow: 0 0.5em 0.5em rgba(0, 0, 0, 0.5);
-    margin-bottom: 1em;
-}
-
-.tilkøb-container{
-    grid-row-start: 8;
-    padding: 0 1em;
-}
-
-.tilkøb-box{
-    /* grid-row-start: 6; */
-    /* background-color: #629D8C; */
-    display: grid;
-    grid-template-rows: repeat(3, 1fr);
-    height: 16em;
-    text-align: center;
-    box-shadow: 
-    0.2em 0.2em 0.2em #3A349E, 
-    -0.2em -0.2em 0.2em #3A349E,  
-    -0.2em 0.2em 0.2em #3A349E,   
-    0.2em -0.2em 0.2em #3A349E;
-    padding-top: 1em;
-    position: relative;
-}
-
-.tilkøb-tekst{
-    padding: 0 1em;
-    grid-row-start: 2;
-}
-
-.tilkøb-læs-mere-button{
-    position: absolute;
-    /* bottom: 1em;
-    left: 50%;
-    transform: translateX(-50%); */
-    background: linear-gradient(to bottom, #629D8C, #3A349E);
-    font-family: Arial, Helvetica, sans-serif;
-    color: whitesmoke;
-    text-decoration: none;
-    padding: 1.3em 3.2em; 
-    justify-self: center;
-    align-self: flex-end;
-    border-radius: 2em;
-    width: fit-content;
-    box-shadow: 0 0.5em 0.5em rgba(0, 0, 0, 0.5);
-    margin-bottom: 1em;
-}
-
-.småting-med-tekst1{
-    grid-row-start: 9;
-}
-
-.småting-med-tekst2{
-    grid-row-start: 9;
-}
-
-.småting-med-tekst3{
-    grid-row-start: 9;
+@media only screen and (max-width: 850px){
+	main{
+		width: 100% !important;
+	}
+	body{
+		margin: 0;
+	}
+	header{
+		margin-bottom: 0;
+	}
 }
