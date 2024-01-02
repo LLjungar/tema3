@@ -123,8 +123,21 @@ main{
     width: 26em;
     justify-self: center;
 }
-
-
+.ledelse-box{    
+    /* grid-row-start: 6; */
+    /* background-color: #629D8C; */
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    height: 16em;
+    text-align: center;
+    box-shadow: 
+    0.2em 0.2em 0.2em #3A349E, 
+    -0.2em -0.2em 0.2em #3A349E,  
+    -0.2em 0.2em 0.2em #3A349E,   
+    0.2em -0.2em 0.2em #3A349E;
+    padding-top: 1em;
+    position: relative;
+}
 
 
 .ledelse-tekst{
