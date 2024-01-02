@@ -22,13 +22,20 @@ h1{
 	font-size: 22px;
 }
 
-
 /*Navigation start*/
 header{
 	background-color: #333;
 	height: 5em;
 	padding: 1em;
 	margin-bottom: 4em;	
+}
+/* Styling main */
+
+.frontpage-container{
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 6em 6em;
+    row-gap: 2em;
 }
 
 .logo img{
@@ -57,67 +64,183 @@ nav a:hover{
 	transition: 0.5s; /*skaber en mere blød overgang mellem linkfarverne*/
 }
 
+.workshop-container{
+    grid-row-start: 6;
+    padding: 2em 1em;
+    grid-column-end: span 2;
+    width: 26em;
+    justify-self: center;
+}
+
 main{
     padding: 0 2em 2em;
 }
 
 
+
+
+.ledelse-container{
+    grid-row-start: 7;
+    /* grid-column-start: 3; */ 
+    grid-column-start: 2;
+    padding: 2em 1em;
+    grid-column-end: span 2;
+    width: 26em;
+    justify-self: center;
+}
+
+
+
+
+.ledelse-tekst{
+    padding: 0 1em;
+    grid-row-start: 2;
+}
+
+.ledelse-læs-mere-button{
+    position: absolute;
+    /* bottom: 1em;
+    left: 50%;
+    transform: translateX(-50%); */
+    background: linear-gradient(to bottom, #629D8C, #3A349E);
+    font-family: Arial, Helvetica, sans-serif;
+    color: whitesmoke;
+    text-decoration: none;
+    padding: 1.3em 3.2em; 
+    justify-self: center;
+    align-self: flex-end;
+    border-radius: 2em;
+    width: fit-content;
+    box-shadow: 0 0.5em 0.5em rgba(0, 0, 0, 0.5);
+    margin-bottom: 1em;
+}
+
+.tilkøb-container{
+    grid-row-start: 8;
+    padding: 2em 1em;
+    grid-column-end: span 2;
+    width: 26em;
+    justify-self: center;
+}
+
+
+.tilkøb-box{
+    /* grid-row-start: 6; */
+    /* background-color: #629D8C; */
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    height: 16em;
+    text-align: center;
+    box-shadow: 
+    0.2em 0.2em 0.2em #3A349E, 
+    -0.2em -0.2em 0.2em #3A349E,  
+    -0.2em 0.2em 0.2em #3A349E,   
+    0.2em -0.2em 0.2em #3A349E;
+    padding-top: 1em;
+    position: relative;
+}
+
+.tilkøb-tekst{
+    padding: 0 1em;
+    grid-row-start: 2;
+}
+
+.tilkøb-læs-mere-button{
+    position: absolute;
+    /* bottom: 1em;
+    left: 50%;
+    transform: translateX(-50%); */
+    background: linear-gradient(to bottom, #629D8C, #3A349E);
+    font-family: Arial, Helvetica, sans-serif;
+    color: whitesmoke;
+    text-decoration: none;
+    padding: 1.3em 3.2em; 
+    justify-self: center;
+    align-self: flex-end;
+    border-radius: 2em;
+    width: fit-content;
+    box-shadow: 0 0.5em 0.5em rgba(0, 0, 0, 0.5);
+    margin-bottom: 1em;
+}
+
+.citatmaskot-forside{
+    grid-row: 6 / span 2; 
+    grid-column-start: 3;
+    transform: scaleX(-1);
+    filter: FlipH;  /* For Edge browsers */
+}
+
+.småting-med-tekst1{
+    grid-row-start: 9;
+}
+
+.småting-med-tekst2{
+    grid-row-start: 9;
+}
+
+.småting-med-tekst3{
+    grid-row-start: 9;
+}
+
+
+
+
 /*Kontaktform*/
 
 .kontaktform {
-  border-radius: 5px;
-  background-color: #c5c5c5;
-  padding: 1.3em;
-  width: 50%;
-  margin: 0 auto; /*Centrerer elementet på siden*/
-}
+    border-radius: 5px;
+    background-color: #c5c5c5;
+    padding: 1.3em;
+    width: 50%;
+    margin: 0 auto; /*Centrerer elementet på siden*/
+  }
+  
+  input[type=text], input[type=email], input[type=tel], select, textarea{
+      width: 100%;
+      padding: 1em;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      margin-top: 0,5em;
+      margin-bottom: 1em;
+  }
+  select, input[type=checkbox], input[type=radio], input[type=submit]{
+      cursor: pointer;
+  
+  }
+  fieldset {
+      border-color: orange;
+      border-style: dotted;
+      margin-bottom: 0,8em;
+  }
+  input[type=checkbox] {
+       margin: 0.8em 0;
+  }
+  input[type=submit]  {
+      background-color: #DD7824;
+      color: white;
+      padding: 0.8em 1.5em;
+      border-radius: 4px;
+      width: 100%;
+      font-size: 18px;  
+  }
 
-input[type=text], input[type=email], input[type=tel], select, textarea{
-	width: 100%;
-	padding: 1em;
-	border: 1px solid #ccc;
-	border-radius: 4px;
-	margin-top: 0,5em;
-	margin-bottom: 1em;
-}
-select, input[type=checkbox], input[type=radio], input[type=submit]{
-	cursor: pointer;
+  input[type=submit] :hover {
+      background-color: #ff8827;
+  }
 
-}
-fieldset {
-	border-color: orange;
-	border-style: dotted;
-	margin-bottom: 0,8em;
-}
-input[type=checkbox] {
-     margin: 0.8em 0;
-}
-input[type=submit]  {
-	background-color: #DD7824;
-	color: white;
-	padding: 0.8em 1.5em;
-	border-radius: 4px;
-	width: 100%;
-	font-size: 18px;
+  /*Andre style elementer*/
+  
+  .visually-hidden{ /*WCAG defineret class som fjerner element fra skærm, men som stadig kan læses af skærmlæseren*/
+      border: 0;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+  }
 
-
-
-}
-input[type=submit] :hover {
-	background-color: #ff8827;
-}
-/*Andre style elementer*/
-
-.visually-hidden{ /*WCAG defineret class som fjerner element fra skærm, men som stadig kan læses af skærmlæseren*/
-	border: 0;
-	clip: rect(0 0 0 0);
-	height: 1px;
-	margin: -1px;
-	overflow: hidden;
-	padding: 0;
-	position: absolute;
-	width: 1px;
-}
 
 
 /*Responsiv tilpasning*/
