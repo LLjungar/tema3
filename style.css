@@ -112,8 +112,6 @@ main{
 }
 
 
-
-
 .ledelse-container{
     grid-row-start: 7;
     /* grid-column-start: 3; */ 
@@ -230,8 +228,6 @@ main{
 .småting-med-tekst3{
     grid-row-start: 9;
 }
-
-
 
 
 /*Kontaktform*/
