@@ -37,6 +37,11 @@ header{
     grid-template-columns: 1fr 1fr 1fr;
     margin: 6em 6em;
     row-gap: 2em;
+    background-color: rgba(99, 156, 139, 0.1);
+}
+
+.background-color{
+    background-color: #DD7824;
 }
 
 .logo img{
@@ -116,13 +121,11 @@ nav a:hover{
     grid-template-rows: repeat(3, 1fr);
     height: 16em;
     text-align: center;
-    box-shadow: 
-    0.2em 0.2em 0.2em #3A349E, 
-    -0.2em -0.2em 0.2em #3A349E,  
-    -0.2em 0.2em 0.2em #3A349E,   
-    0.2em -0.2em 0.2em #3A349E;
     padding-top: 1em;
     position: relative;
+    box-shadow: 0 0.2em 0.2em rgba(0, 0, 0, 0.2);
+    /* border: 0.01em solid #3A349E; */
+    background-color: white;
 }
 
 .læs-mere-button{
@@ -165,13 +168,10 @@ main{
     grid-template-rows: repeat(3, 1fr);
     height: 16em;
     text-align: center;
-    box-shadow: 
-    0.2em 0.2em 0.2em #3A349E, 
-    -0.2em -0.2em 0.2em #3A349E,  
-    -0.2em 0.2em 0.2em #3A349E,   
-    0.2em -0.2em 0.2em #3A349E;
     padding-top: 1em;
     position: relative;
+    box-shadow: 0 0.2em 0.2em rgba(0, 0, 0, 0.2);
+    background-color: white;
 }
 
 
@@ -214,13 +214,10 @@ main{
     grid-template-rows: repeat(3, 1fr);
     height: 16em;
     text-align: center;
-    box-shadow: 
-    0.2em 0.2em 0.2em #3A349E, 
-    -0.2em -0.2em 0.2em #3A349E,  
-    -0.2em 0.2em 0.2em #3A349E,   
-    0.2em -0.2em 0.2em #3A349E;
     padding-top: 1em;
     position: relative;
+    box-shadow: 0 0.2em 0.2em rgba(0, 0, 0, 0.2);
+    background-color: white;
 }
 
 .tilkøb-tekst{
@@ -248,8 +245,10 @@ main{
 }
 
 .citatmaskot-forside{
+    position: relative;
     grid-row: 6 / span 2; 
-    grid-column-start: 3;
+    grid-column: 3;
+    justify-self: left;
     transform: scaleX(-1);
     filter: FlipH;  /* For Edge browsers */
 }
