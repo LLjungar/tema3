@@ -15,6 +15,7 @@ h1, h2, h3, h4, h5, h6{
 
 h1{
 	text-transform: uppercase; /*Teksten transformeres til udelukkende at være store bogstaver*/
+    color:#3A349E;
 }
 
 .kontakt-tekst{
@@ -62,6 +63,42 @@ nav li a {
 nav a:hover{
 	color: #DD7824;
 	transition: 0.5s; /*skaber en mere blød overgang mellem linkfarverne*/
+}
+
+.intro{
+    grid-row-start: 2;
+    grid-column-start: 1;
+    grid-column: span 2;
+}
+
+.stefan-img{
+    grid-row-start: 2;
+    grid-column-start: 3;
+    justify-self: end;
+
+}
+
+.kontakt-button-forside{
+    grid-row-start: 4;
+    grid-column-start: 2;
+    background: linear-gradient(to bottom, #629D8C, #3A349E);
+    font-family: Arial, Helvetica, sans-serif;
+    color: whitesmoke;
+    text-decoration: none;
+    padding: 1.3em 3.2em; 
+    justify-self: center;
+    align-self: flex-end;
+    border-radius: 2em;
+    width: fit-content;
+    box-shadow: 0 0.5em 0.5em rgba(0, 0, 0, 0.5);
+    margin-bottom: 1em;
+}
+
+.læs-mere-tjenester{
+    grid-row-start: 5;
+    grid-column-end: span 2;
+    color:#3A349E;
+    font-style: italic;
 }
 
 .workshop-container{
