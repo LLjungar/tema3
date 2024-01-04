@@ -276,7 +276,7 @@ main{
     display: grid;
     grid-row-start: 10;
     row-gap: 2em;
-    padding-right: 1.5em;
+    padding: 8em 1.5em 1.5em 0;
 }
 
 .fingerprint-ikon{
@@ -290,9 +290,10 @@ main{
 
 .house-container{
     display: grid; 
+    justify-content: center;
     grid-row-start: 10;
     row-gap: 2em;
-    padding: 0 1.5em;
+    padding: 8em 1.5em 1.5em 1.5em;
 }
 
 .house-ikon{
@@ -308,7 +309,7 @@ main{
     display: grid; 
     grid-row-start: 10;
     row-gap: 2em;
-    padding-left: 1.5em;
+    padding: 8em 0 1.5em 1.5em;
 }
 
 .check-ikon{
