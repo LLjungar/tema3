@@ -40,10 +40,6 @@ header{
     background-color: rgba(99, 156, 139, 0.1);
 }
 
-.background-color{
-    background-color: #DD7824;
-}
-
 .logo img{
 	height: 50px;
 }
@@ -110,12 +106,14 @@ nav a:hover{
     grid-row-start: 6;
     padding: 2em 1em;
     grid-column-end: span 2;
+    /*grid-column-end: 2; */
     width: 26em;
     justify-self: center;
+    z-index: 1;
 }
 
 .workshop-box{
-    /* grid-row-start: 6; */
+    grid-row-start: 6;
     /* background-color: #629D8C; */
     display: grid;
     grid-template-rows: repeat(3, 1fr);
@@ -124,8 +122,8 @@ nav a:hover{
     padding-top: 1em;
     position: relative;
     box-shadow: 0 0.2em 0.2em rgba(0, 0, 0, 0.2);
-    /* border: 0.01em solid #3A349E; */
     background-color: white;
+    z-index: 1;
 }
 
 .læs-mere-button{
@@ -246,12 +244,30 @@ main{
 
 .citatmaskot-forside{
     position: relative;
+    z-index: 2;
+    width: 100%;
+    left: 11em;
+    top: 60em;
+  
+
+    /*
+    grid-row: 6 / span 2; 
+    grid-column: 3;
+    justify-self: left;*/
+    transform: scaleX(-1);
+    filter: FlipH;  /* For Edge browsers */
+}
+
+/*
+.citatmaskot-forside{
+    position: relative;
+    z-index: 2;
     grid-row: 6 / span 2; 
     grid-column: 3;
     justify-self: left;
     transform: scaleX(-1);
     filter: FlipH;  /* For Edge browsers */
-}
+/*}*/
 
 .småting-med-tekst1{
     grid-row-start: 9;
