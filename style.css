@@ -16,6 +16,7 @@ h1, h2, h3, h4, h5, h6{
 h1{
 	text-transform: uppercase; /*Teksten transformeres til udelukkende at være store bogstaver*/
     color:#3A349E;
+    align-self: center;
 }
 
 .kontakt-tekst{
@@ -70,12 +71,14 @@ nav a:hover{
     grid-row-start: 2;
     grid-column-start: 1;
     grid-column: span 2;
+    font-size: 1.5em;
 }
 
 .stefan-img{
     grid-row-start: 2;
     grid-column-start: 3;
     justify-self: end;
+    padding: 0 3em;
 
 }
 
