@@ -38,7 +38,17 @@ header{
     grid-template-columns: 1fr 1fr 1fr;
     margin: 6em 6em;
     row-gap: 2em;
-    background-color: rgba(99, 156, 139, 0.1);
+    /* background-color: rgba(99, 156, 139, 0.1); */
+}
+
+.overlay {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%; /* Adjust the width as needed */
+    height: 150%; /* Adjust the height as needed */
+    background-color: rgba(99, 156, 139, 0.1); /* Your desired background color */
+    z-index: -1;
 }
 
 .logo img{
@@ -103,6 +113,7 @@ nav a:hover{
     grid-column-end: span 2;
     color:#3A349E;
     font-style: italic;
+    padding-top: 5em;
 }
 
 .workshop-container{
@@ -250,7 +261,7 @@ main{
     z-index: 2;
     width: 100%;
     left: 11em;
-    top: 60em;
+    top: 70em;
   
 
     /*
@@ -319,64 +330,6 @@ main{
 .småting-med-tekst3{
     text-align: center;
 }
-
-
-/*Kontaktform*/
-
-.kontaktform {
-    border-radius: 5px;
-    background-color: #c5c5c5;
-    padding: 1.3em;
-    width: 50%;
-    margin: 0 auto; /*Centrerer elementet på siden*/
-  }
-  
-  input[type=text], input[type=email], input[type=tel], select, textarea{
-      width: 100%;
-      padding: 1em;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      margin-top: 0,5em;
-      margin-bottom: 1em;
-  }
-  select, input[type=checkbox], input[type=radio], input[type=submit]{
-      cursor: pointer;
-  
-  }
-  fieldset {
-      border-color: orange;
-      border-style: dotted;
-      margin-bottom: 0,8em;
-  }
-  input[type=checkbox] {
-       margin: 0.8em 0;
-  }
-  input[type=submit]  {
-      background-color: #DD7824;
-      color: white;
-      padding: 0.8em 1.5em;
-      border-radius: 4px;
-      width: 100%;
-      font-size: 18px;  
-  }
-
-  input[type=submit] :hover {
-      background-color: #ff8827;
-  }
-
-  /*Andre style elementer*/
-  
-  .visually-hidden{ /*WCAG defineret class som fjerner element fra skærm, men som stadig kan læses af skærmlæseren*/
-      border: 0;
-      clip: rect(0 0 0 0);
-      height: 1px;
-      margin: -1px;
-      overflow: hidden;
-      padding: 0;
-      position: absolute;
-      width: 1px;
-  }
-
 
 
 /*Responsiv tilpasning*/
