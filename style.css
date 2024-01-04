@@ -269,16 +269,51 @@ main{
     filter: FlipH;  /* For Edge browsers */
 /*}*/
 
+.fingerprint-container{
+    display: grid;
+    grid-row-start: 10;
+    row-gap: 2em;
+    padding-right: 1.5em;
+}
+
+.fingerprint-ikon{
+    justify-self: center;
+    padding-top: 1em;
+}
+
 .småting-med-tekst1{
-    grid-row-start: 9;
+    text-align: center;
+} 
+
+.house-container{
+    display: grid; 
+    grid-row-start: 10;
+    row-gap: 2em;
+    padding: 0 1.5em;
+}
+
+.house-ikon{
+    justify-self: center;
 }
 
 .småting-med-tekst2{
-    grid-row-start: 9;
+    justify-self: center;
+    text-align: center;
+}
+
+.check-container{
+    display: grid; 
+    grid-row-start: 10;
+    row-gap: 2em;
+    padding-left: 1.5em;
+}
+
+.check-ikon{
+    justify-self: center;
 }
 
 .småting-med-tekst3{
-    grid-row-start: 9;
+    text-align: center;
 }
 
 
