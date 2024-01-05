@@ -15,6 +15,8 @@ h1, h2, h3, h4, h5, h6{
 
 h1{
 	text-transform: uppercase; /*Teksten transformeres til udelukkende at være store bogstaver*/
+    color:#3A349E;
+    align-self: center;
 }
 
 .kontakt-tekst{
@@ -36,6 +38,17 @@ header{
     grid-template-columns: 1fr 1fr 1fr;
     margin: 6em 6em;
     row-gap: 2em;
+    /* background-color: rgba(99, 156, 139, 0.1); */
+}
+
+.overlay {
+    position: absolute;
+    top: 130%;
+    left: 0;
+    width: 100%; 
+    height: 130%; 
+    background-color: rgba(99, 156, 139, 0.1); /* Your desired background color */
+    z-index: -1;
 }
 
 .logo img{
@@ -64,28 +77,67 @@ nav a:hover{
 	transition: 0.5s; /*skaber en mere blød overgang mellem linkfarverne*/
 }
 
+.intro{
+    grid-row-start: 2;
+    grid-column-start: 1;
+    grid-column: span 2;
+    font-size: 1.5em;
+}
+
+.stefan-img{
+    grid-row-start: 2;
+    grid-column-start: 3;
+    justify-self: end;
+    padding: 0 3em;
+
+}
+
+.kontakt-button-forside{
+    grid-row-start: 4;
+    grid-column-start: 2;
+    background: linear-gradient(to bottom, #629D8C, #3A349E);
+    font-family: Arial, Helvetica, sans-serif;
+    color: whitesmoke;
+    text-decoration: none;
+    padding: 1.3em 3.2em; 
+    justify-self: center;
+    align-self: flex-end;
+    border-radius: 2em;
+    width: fit-content;
+    box-shadow: 0 0.5em 0.5em rgba(0, 0, 0, 0.5);
+    margin-bottom: 1em;
+}
+
+.læs-mere-tjenester{
+    grid-row-start: 5;
+    grid-column-end: span 2;
+    color:#3A349E;
+    font-style: italic;
+    padding-top: 5em;
+}
+
 .workshop-container{
     grid-row-start: 6;
     padding: 2em 1em;
     grid-column-end: span 2;
+    /*grid-column-end: 2; */
     width: 26em;
     justify-self: center;
+    z-index: 1;
 }
 
 .workshop-box{
-    /* grid-row-start: 6; */
+    grid-row-start: 6;
     /* background-color: #629D8C; */
     display: grid;
     grid-template-rows: repeat(3, 1fr);
     height: 16em;
     text-align: center;
-    box-shadow: 
-    0.2em 0.2em 0.2em #3A349E, 
-    -0.2em -0.2em 0.2em #3A349E,  
-    -0.2em 0.2em 0.2em #3A349E,   
-    0.2em -0.2em 0.2em #3A349E;
     padding-top: 1em;
     position: relative;
+    box-shadow: 0 0.2em 0.2em rgba(0, 0, 0, 0.2);
+    background-color: white;
+    z-index: 1;
 }
 
 .læs-mere-button{
@@ -112,8 +164,6 @@ main{
 }
 
 
-
-
 .ledelse-container{
     grid-row-start: 7;
     /* grid-column-start: 3; */ 
@@ -130,13 +180,10 @@ main{
     grid-template-rows: repeat(3, 1fr);
     height: 16em;
     text-align: center;
-    box-shadow: 
-    0.2em 0.2em 0.2em #3A349E, 
-    -0.2em -0.2em 0.2em #3A349E,  
-    -0.2em 0.2em 0.2em #3A349E,   
-    0.2em -0.2em 0.2em #3A349E;
     padding-top: 1em;
     position: relative;
+    box-shadow: 0 0.2em 0.2em rgba(0, 0, 0, 0.2);
+    background-color: white;
 }
 
 
@@ -179,13 +226,10 @@ main{
     grid-template-rows: repeat(3, 1fr);
     height: 16em;
     text-align: center;
-    box-shadow: 
-    0.2em 0.2em 0.2em #3A349E, 
-    -0.2em -0.2em 0.2em #3A349E,  
-    -0.2em 0.2em 0.2em #3A349E,   
-    0.2em -0.2em 0.2em #3A349E;
     padding-top: 1em;
     position: relative;
+    box-shadow: 0 0.2em 0.2em rgba(0, 0, 0, 0.2);
+    background-color: white;
 }
 
 .tilkøb-tekst{
@@ -213,83 +257,82 @@ main{
 }
 
 .citatmaskot-forside{
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    left: 11em;
+    top: 70em;
+  
+
+    /*
     grid-row: 6 / span 2; 
-    grid-column-start: 3;
+    grid-column: 3;
+    justify-self: left;*/
     transform: scaleX(-1);
     filter: FlipH;  /* For Edge browsers */
 }
 
+/*
+.citatmaskot-forside{
+    position: relative;
+    z-index: 2;
+    grid-row: 6 / span 2; 
+    grid-column: 3;
+    justify-self: left;
+    transform: scaleX(-1);
+    filter: FlipH;  /* For Edge browsers */
+/*}*/
+
+.fingerprint-container{
+    display: grid;
+    grid-row-start: 10;
+    row-gap: 2em;
+    padding: 8em 1.5em 1.5em 0;
+}
+
+.fingerprint-ikon{
+    justify-self: center;
+    padding-top: 1em;
+}
+
 .småting-med-tekst1{
-    grid-row-start: 9;
+    text-align: center;
+    font-weight: bold;
+} 
+
+.house-container{
+    display: grid; 
+    justify-content: center;
+    grid-row-start: 10;
+    row-gap: 2em;
+    padding: 8em 1.5em 1.5em 1.5em;
+}
+
+.house-ikon{
+    justify-self: center;
 }
 
 .småting-med-tekst2{
-    grid-row-start: 9;
+    justify-self: center;
+    text-align: center;
+    font-weight: bold;
+}
+
+.check-container{
+    display: grid; 
+    grid-row-start: 10;
+    row-gap: 2em;
+    padding: 8em 0 1.5em 1.5em;
+}
+
+.check-ikon{
+    justify-self: center;
 }
 
 .småting-med-tekst3{
-    grid-row-start: 9;
+    text-align: center;
+    font-weight: bold;
 }
-
-
-
-
-/*Kontaktform*/
-
-.kontaktform {
-    border-radius: 5px;
-    background-color: #c5c5c5;
-    padding: 1.3em;
-    width: 50%;
-    margin: 0 auto; /*Centrerer elementet på siden*/
-  }
-  
-  input[type=text], input[type=email], input[type=tel], select, textarea{
-      width: 100%;
-      padding: 1em;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      margin-top: 0,5em;
-      margin-bottom: 1em;
-  }
-  select, input[type=checkbox], input[type=radio], input[type=submit]{
-      cursor: pointer;
-  
-  }
-  fieldset {
-      border-color: orange;
-      border-style: dotted;
-      margin-bottom: 0,8em;
-  }
-  input[type=checkbox] {
-       margin: 0.8em 0;
-  }
-  input[type=submit]  {
-      background-color: #DD7824;
-      color: white;
-      padding: 0.8em 1.5em;
-      border-radius: 4px;
-      width: 100%;
-      font-size: 18px;  
-  }
-
-  input[type=submit] :hover {
-      background-color: #ff8827;
-  }
-
-  /*Andre style elementer*/
-  
-  .visually-hidden{ /*WCAG defineret class som fjerner element fra skærm, men som stadig kan læses af skærmlæseren*/
-      border: 0;
-      clip: rect(0 0 0 0);
-      height: 1px;
-      margin: -1px;
-      overflow: hidden;
-      padding: 0;
-      position: absolute;
-      width: 1px;
-  }
-
 
 
 /*Responsiv tilpasning*/
@@ -304,4 +347,13 @@ main{
 	header{
 		margin-bottom: 0;
 	}
+    .overlay{
+            position: absolute;
+            top: 130%;
+            left: 0;
+            width: 255%; 
+            height: 170%; 
+            background-color: rgba(99, 156, 139, 0.1); 
+            z-index: -1;
+    }
 }
