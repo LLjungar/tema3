@@ -67,6 +67,7 @@ img {
     color: #fff; /* Hvid tekstfarve for besøgte links */
 }
 
+
 /* Tilpasninger for mobilvisning */
 @media only screen and (max-width: 767px) {
     .header {
@@ -120,6 +121,15 @@ img {
         font-family: Arial, Helvetica, sans-serif;
         text-align: center;
     }
+}
+
+/*Indhold Jonas skal lave lørdag den 6. januar*/
+h1 
+p
+
+/*til desktop version*/
+@media only screen and (min-width: 768px) {
+
 }
 
 /*Kontaktformular*/
