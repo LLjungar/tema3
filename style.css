@@ -6,7 +6,7 @@
 
 body {
 	font-family: Arial, Helvetica, sans-serif;
-	margin: 0 0 5em 0; /*Resetting af margin i hele bodyen + tilføjer luft under kontaktformular*/
+	/*margin: 0 0 5em 0; /*Resetting af margin i hele bodyen + tilføjer luft under kontaktformular*/
 }
 
 h1, h2, h3, h4, h5, h6{
@@ -334,15 +334,78 @@ main{
     font-weight: bold;
 }
 
+/* Mobile Styles */
+@media only screen and (max-width: 600px) {
+    body {
+        margin: 0;
+    }
+
+    header {
+        margin-bottom: 0;
+    }
+
+    .overlay {
+        position: absolute;
+        top: 130%;
+        left: 0;
+        width: 255%;
+        height: 170%;
+        background-color: rgba(99, 156, 139, 0.1);
+        z-index: -1;
+    }
+
+    .frontpage-container {
+        display: block;
+        margin: 0.5em;
+    }
+
+    .intro,
+    .stefan-img,
+    .kontakt-button-forside,
+    .læs-mere-tjenester,
+    .workshop-container,
+    .ledelse-container,
+    .tilkøb-container,
+    .fingerprint-container,
+    .house-container,
+    .check-container {
+        grid-column: initial;
+        grid-row: initial;
+        width: auto;
+        margin: 0.5em;
+        padding: 0.5em;
+    }
+
+    .workshop-box,
+    .ledelse-box,
+    .tilkøb-box {
+        height: auto;
+    }
+
+    .citatmaskot-forside {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        left: 0;
+        top: 0;
+        transform: scaleX(1);
+    }
+
+    .intro{
+        display: block;
+    }
+}
+
 
 /*Responsiv tilpasning*/
-
+/*
 @media only screen and (max-width: 850px){
 	main{
 		width: 100% !important;
 	}
 	body{
 		margin: 0;
+    
 	}
 	header{
 		margin-bottom: 0;
