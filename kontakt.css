@@ -67,6 +67,23 @@ img {
     color: #fff; /* Hvid tekstfarve for besøgte links */
 }
 
+section{
+    margin: 1em 1em;
+}
+
+h1, h3{
+    color: #3A349E;
+    padding-top: 1.5em;
+}
+
+.email-telefon{
+    color: #BA6C75;
+}
+
+.lokation-tekst{
+    color: #3B359F;
+    padding-bottom: 2em;
+}
 
 /* Tilpasninger for mobilvisning */
 @media only screen and (max-width: 767px) {
@@ -121,11 +138,11 @@ img {
         font-family: Arial, Helvetica, sans-serif;
         text-align: center;
     }
+    
+    .kontakt-maskot{
+        display: none;
+    }
 }
-
-/*Indhold Jonas skal lave lørdag den 6. januar*/
-h1 
-p
 
 /*til desktop version*/
 @media only screen and (min-width: 768px) {
@@ -193,7 +210,12 @@ select {
     box-shadow: none;
 }
 
-
+.send-besked{
+    background: linear-gradient(to bottom, #BC6D74, #3A349E);
+    color: white;
+    border-radius: 2em;
+    cursor: pointer;
+}
 
 /* Checkbox styling */
 .checkbox {
