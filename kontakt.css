@@ -73,7 +73,6 @@ section{
 
 h1, h3{
     color: #3A349E;
-    padding-top: 1.5em;
 }
 
 .email-telefon{
@@ -82,11 +81,10 @@ h1, h3{
 
 .lokation-tekst{
     color: #3B359F;
-    padding-bottom: 2em;
 }
 
 .landkort{
-    padding-bottom: 4em;
+    padding-bottom: 2em;
 }
 
 
@@ -147,11 +145,67 @@ h1, h3{
     .kontakt-maskot{
         display: none;
     }
+
+    .lokation-tekst{
+        color: #3B359F;
+        padding-bottom: 2em;
+    }
 }
 
 /*til desktop version*/
 @media only screen and (min-width: 768px) {
+    /* .kontakt-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(5, 1fr);
+    } */
+    .kontakt-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(2, 30em) auto;
+        row-gap: 1em;
+    }
+    
+    .kontakt-info {
+        display: grid;
+        grid-template-rows: repeat(3, 7em);
+        /* grid-template-columns: repeat(3, 1fr); */
+        grid-column-start: 1;
+        padding-top: 1em;
+        /* background-color: rgba(99, 156, 139, 0.1) bare for at kunne se boksen */
+    }
+    
+    .kontakt-email{
+        grid-row-start: 2;
+    }
 
+    .kontakt-telefon{
+        grid-row-start: 3;
+    }
+
+    .kontakt-lokation{
+        grid-row-start: 4;
+        grid-column-end: 2;
+    }
+
+    .lokation-tekst{
+        grid-column-end: 2;
+        margin-bottom: 0;
+    }
+
+    .kontakt-maskot{
+        grid-column-start: 2;
+        width: 85%;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        justify-self: center;
+        align-self: center;
+    }
+
+    .landkort{
+        grid-row-start: 2;
+        height: 30em;
+    }
 }
 
 /*Kontaktformular*/
@@ -176,6 +230,7 @@ body {
     background: #f9f9f9; /* Tilføj ønsket baggrundsfarve */
     border: 1px solid #ddd; /* Tilføj en enkel ramme */
     box-shadow: 0 4px 16px rgba(59, 53, 159, 0.4); /* Opdateret skygge med en mere markeret bundskygge */
+    margin-top: 10em;
 }
 
 h1 {
