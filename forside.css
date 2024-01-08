@@ -28,7 +28,7 @@ body {
   
   .header {
     position: relative;
-    background-image: url(/img/header.svg);
+    background-image: url(img/header.svg);
     background-repeat: no-repeat;
     background-size: cover;
     max-width: 100%;
@@ -79,7 +79,7 @@ body {
   }
   
   .footer {
-    background-image: url(/img/footer.svg);
+    background-image: url(img/footer.svg);
     background-repeat: no-repeat;
     background-size: cover;
     display: grid;
