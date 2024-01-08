@@ -7,7 +7,258 @@
 body {
 	font-family: Arial, Helvetica, sans-serif;
 	/*margin: 0 0 5em 0; /*Resetting af margin i hele bodyen + tilføjer luft under kontaktformular*/
+    margin: 0;
 }
+
+/*header og footer*/
+body {
+    font-family: Helvetica, sans-serif;
+    margin: 0;
+  }
+  
+  a {
+    color:white;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: #BF6E73;
+  }
+  
+  .header {
+    position: relative;
+    background-image: url(/img/header.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 100%;
+    padding-bottom: 40em;
+    z-index: 1;
+  
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .header img {
+    max-width: 50%
+  }
+  
+  .mobile-menu-icon {
+    display: none;
+  }
+  
+  .logo-container {
+    grid-column: 1/2;
+    grid-row: 1/1;
+  }
+  
+  .menu-container {
+    grid-column: 2/2;
+    grid-row: 1/1;
+    justify-self: end;
+    padding-right: 1em;
+  }
+  
+  .menu {
+    display: flex;
+    align-items: center;
+    padding-left: 5em;
+  }
+  
+  .menu-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  .menu-list li {
+    margin-right: 20px;
+  }
+  
+  .footer {
+    background-image: url(/img/footer.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    padding-bottom: 5em;
+    padding-top: 5em;
+  }
+  
+  .footer img {
+    max-width: 25%
+  }
+  
+  .logo-container-footer {
+    grid-column: 1/4;
+    grid-row: 1/1;
+  }
+  
+  .text-container-footer {
+    grid-column: 2/4;
+    grid-row: 2/2;
+  }
+  
+  .menu-container-footer {
+    grid-column: 3/4;
+    grid-row: 2/2;
+  }
+  
+  
+  
+  .facebook-container-footer {
+    grid-column: 3/4;
+    grid-row: 1/1;
+    text-align: right;
+    
+  }
+  
+  .linkedin-container-footer {
+    grid-column: 4/4;
+    grid-row: 1/1;
+  }
+  
+  
+  .menu-list-footer {
+   list-style: none;
+   padding-right: 1em;
+  }
+  
+  .menu-list-footer li {
+    font-size: 10px;
+   }
+  
+   .menu-list-footer a {
+    text-decoration: none;  /* Fjerner understregning fra links */
+    font-weight: normal;  /* Fjerner fed stil fra links */
+  }
+  
+  @media only screen and (max-width: 767px) {
+    .header {
+      min-height: auto; /* Ændrer headerens højde til at tilpasse indholdet */
+      height: auto; /* Juster height til auto */
+      background-size: cover; /* Bevarer baggrundsbilledets proportioner */
+      padding-bottom: 18em;
+  }
+    
+    .header img {
+      max-width: 100%
+    }
+    
+    .menu {
+      display: flex;
+      align-items: center;
+    }
+  
+    .menu-container {
+      grid-column: 2/2;
+      grid-row: 1/1;
+      padding-left: 5em;
+    }
+  
+    .menu-list {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      position: absolute;
+      background-color: #3B359F;
+      top: 60px;
+      left: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+  
+    .menu-list.show-mobile {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 50vh;
+      margin: 0;
+      padding: 20px;
+    }
+  
+    .menu-list li {
+      margin-top: 40px;
+      margin-bottom: 10px;
+      margin-right: 0;
+      font-family: Helvetica, sans-serif;
+      text-align: center;
+      color: #fae5a0;
+    }
+  
+    .mobile-menu-icon {
+      display: block;
+      color: white;
+      font-size: x-large;
+    }
+  
+    .footer {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #3B359F;
+      padding: 10px;
+      min-height: 5em;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+  
+    .footer img {
+      max-width: 50%
+    }
+    
+    .logo-container-footer {
+      grid-column: 1/4;
+      grid-row: 1/1;
+    }
+    
+    .text-container-footer {
+      grid-column: 2/4;
+      grid-row: 2/2;
+      text-align: left
+    }
+    
+    .menu-container-footer {
+      grid-column: 3/4;
+      grid-row: 2/2;
+      text-align: left;
+    }
+    
+    .facebook-container-footer {
+      grid-column: 4/4;
+      grid-row: 1/1;
+      text-align: right;
+    }
+    
+    .linkedin-container-footer {
+      grid-column: 4/4;
+      grid-row: 2/2;
+      text-align: right;
+      padding-bottom: 5em;
+    }
+  }
+  
+  /* stilarter for større skærme (over 767px) */
+  @media only screen and (min-width: 768px) {
+    .mobile-menu-icon {
+      display: none;
+    }
+  
+    .logo-container {
+      width: 100%;
+    }
+  }
+
 
 h1, h2, h3, h4, h5, h6{
 	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
@@ -24,13 +275,6 @@ h1{
 	font-size: 22px;
 }
 
-/*Navigation start*/
-header{
-	background-color: #333;
-	height: 5em;
-	padding: 1em;
-	margin-bottom: 4em;	
-}
 /* Styling main */
 
 .frontpage-container{
@@ -53,28 +297,6 @@ header{
 
 .logo img{
 	height: 50px;
-}
-
-nav ul{
-	float: right;
-	list-style-type: none;
-}
-
-nav li {
-	display: inline-block;
-}
-
-nav li a {
-	text-decoration: none;
-	padding: 1em;
-	font-size: 20px;
-	color:#fff;
-	text-transform: uppercase;
-}
-
-nav a:hover{
-	color: #DD7824;
-	transition: 0.5s; /*skaber en mere blød overgang mellem linkfarverne*/
 }
 
 .intro{
@@ -340,21 +562,6 @@ main{
         margin: 0;
     }
 
-    header {
-        margin-bottom: 0;
-    }
-
-    /*
-    .overlay {
-        position: absolute;
-        top: 130%;
-        left: 0;
-        width: 255%;
-        height: 170%;
-        background-color: rgba(99, 156, 139, 0.1);
-        z-index: -1;
-    }*/
-
     .overlay {
         position: absolute;
         top: 99%;
@@ -408,26 +615,3 @@ main{
 }
 
 
-/*Responsiv tilpasning*/
-/*
-@media only screen and (max-width: 850px){
-	main{
-		width: 100% !important;
-	}
-	body{
-		margin: 0;
-    
-	}
-	header{
-		margin-bottom: 0;
-	}
-    .overlay{
-            position: absolute;
-            top: 130%;
-            left: 0;
-            width: 255%; 
-            height: 170%; 
-            background-color: rgba(99, 156, 139, 0.1); 
-            z-index: -1;
-    }
-}

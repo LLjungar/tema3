@@ -5,19 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>forside</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="forside.css">
 </head>
 <body>
-    <header>
-      <ul class="nav-list">
-        <li><a href="tjenester.html">Tjenester</a></li>
-        <li><a href="om.html">Om</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="kontakt.html">Kontakt</a></li>
-      </ul>
-    </header>
 
-    
+  <header class="header">
+    <div class="logo-container">
+      <a href="index.html">
+        <img src="img/logoheader.svg" alt="IT Workshoppen-logo">
+      </a>
+    </div>
+    <div class="menu-container">
+      <nav class="menu">
+        <ul class="menu-list">
+          <li><a href="index.html">Tjenester</a></li>
+          <li><a href="index.html">Om</a></li>
+          <li><a href="index.html">Blog</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+        <div class="mobile-menu-icon">&#9776;</div>
+      </nav>
+    </div>
+  </header>
 
     <main class="frontpage-container">
      <div class="overlay"></div>
@@ -27,9 +36,6 @@
         <img src="img/Stefan.png" alt="Stefan" class="stefan-img">
         <a href="kontakt.html" class="kontakt-button-forside">Kontakt mig</a>
        <h2 class="læs-mere-tjenester">Læs mere om de tjenester jeg kan hjælpe dig med</h2>
-
-
-
 
       <div class="workshop-container">
        <div class="workshop-box">
@@ -57,28 +63,68 @@
        </div>
       </div>
 
-
       <div class="fingerprint-container">
-       <img src="img/fingerprint.svg" class="fingerprint-ikon"> 
+       <img src="img/fingerprint.svg" class="fingerprint-ikon" alt="ikon"> 
        <p class="småting-med-tekst1">Hvordan håndterer vi jeres udfordringer bedst?</p>
       </div>
 
       <div class="house-container">
-       <img src="img/house-ikon.svg" class="house-ikon">
+       <img src="img/house-ikon.svg" class="house-ikon" alt="ikon">
        <p class="småting-med-tekst2">Jeg kommer ud på jeres lokation og holder IT-workshops</p>
       </div>
 
       <div class="check-container">
-       <img src="img/check.svg" class="check-ikon"> 
+       <img src="img/check.svg" class="check-ikon" alt="ikon"> 
        <p class="småting-med-tekst3">Min undervisning tager udgangspunkt i hverdagen</p>
       </div>
       
     </main>
+    <footer class="footer">
+      <div class="logo-container-footer">
+        <a href="index.html">
+          <img src="img/logofooter.svg" alt="IT Workshoppen-logo">
+        </a>
+      </div>
 
+      <div class="text-container-footer">
+        <ul class="menu-list-footer">
+          <li><a href="index.html">IT Workshoppen</a></li>
+          <br>
+          <li><a href="index.html">Vej 1, 1000 Byen</a></li>
+          <br>
+          <li><a href="index.html">Tlf: 12 34 56 78</a></li>
+          <br>
+          <li><a href="index.html">CVR: 1234 567</a></li>
+        </ul>
+      </div>
 
-    <footer>
-        <p>info om stefan og kontakt - måske også navigation</p>
-    </footer>
+      <div class="menu-container-footer">
+        <nav class="menu-footer">
+          <ul class="menu-list-footer">
+            <li><a href="index.html">Tjenester</a></li>
+            <br>
+            <li><a href="index.html">Om</a></li>
+            <br>
+            <li><a href="index.html">Blog</a></li>
+            <br>
+            <li><a href="kontakt.html">Kontakt</a></li>
+          </ul>
+        </nav>
+      </div>
 
+      <div class="facebook-container-footer">
+        <a href="index.html">
+          <img src="img/facebook.svg" alt="facebook-link">
+        </a>
+      </div>
+
+      <div class="linkedin-container-footer">
+        <a href="index.html">
+          <img src="img/linkedin.svg" alt="Linkedin-link">
+        </a>
+      </div>
+      </footer>
+
+    <script src="burger-menu.js" defer></script>
 </body>
 </html>
